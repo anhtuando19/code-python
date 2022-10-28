@@ -21,5 +21,4 @@ file.close()
 file = open("data.txt", "r")
 data = file.read()
 print(data)
-lan nay là t sửa nha
 file.close()
