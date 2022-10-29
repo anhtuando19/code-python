@@ -14,8 +14,8 @@ def read_video():  # Hàm đọc 1 video
 
 
 def print_video(video):  # Hàm in 1 video
-    print("Video tile: " + video.title)
-    print("Video link: " + video.link)
+    print("Video tile: " + video.title, end="")
+    print("Video link: " + video.link, end="")
 
 
 def read_videos():  # Hàm đọc nhiều video
@@ -46,14 +46,19 @@ def write_video_txt(video, file):
     file.write(video.link + "\n")
 
 
-def read_video_txt():
+def read_video_txt(file):
+    title = file.readline()
+    link = file.readline()
+    video = Video(title, link)
+    return video
+
+
+def read_videos_txt():
     videos = []
     with open("data.txt", "r") as file:
         total = file.readline()
         for i in range(int(total)):
-            title = file.readline()
-            link = file.readline()
-            video = Video(title, link)
+            video = read_video_txt(file)
             videos.append(video)
     return videos
 
@@ -62,7 +67,7 @@ def main():  # Hàm main
     videos = read_videos()
     write(videos)
     print("+----list----+")
-    videos = read_video_txt()
+    videos = read_videos_txt()
     print_videos(videos)
 
 
