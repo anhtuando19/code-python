@@ -1,5 +1,4 @@
 # Tạo class video
-from os import link
 
 
 class Video:
