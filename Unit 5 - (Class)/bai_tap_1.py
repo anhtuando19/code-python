@@ -1,6 +1,5 @@
 # Tạo class video
 
-day la thu
 class Video:
     def __init__(self, title, link):
         self.title = title
@@ -45,9 +44,6 @@ def write(videos):  # Ghi file vào text
 def write_video_txt(video, file):
     file.write(video.title + "\n")
     file.write(video.link + "\n")
-
-
-aaaa
 
 
 def read_video_txt():
