@@ -1,6 +1,6 @@
 # Tạo class video
 
-
+day la thu
 class Video:
     def __init__(self, title, link):
         self.title = title
